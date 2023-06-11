@@ -6,7 +6,10 @@ import java.sql.DriverManager;
 public class ConectaDBPostgres {
     private static final String DRIVER = "org.postgresql.Driver";
 
-    private static final String URL=  "jdbc:postgresql://localhost:5432/projeto_integrador";
+   // private static final String URL=  "jdbc:postgresql://localhost:5432/projeto_integrador";
+
+
+    private static final String URL=  "jdbc:postgresql://localhost:5432/jj";
 
     private static final String USER="postgres";
 

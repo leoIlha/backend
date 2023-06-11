@@ -57,7 +57,12 @@ public class Funcionariodao {
             this.sql = "INSERT INTO Funcionario (email,senha,cargo,salario,telefone,nome_funcionario) VALUES (?, ?, ?,?,?,?)";
             this.preparedStatement = connection.prepareStatement(sql);
             this.preparedStatement.setString(1, funcionario.getEmail());
+
+        //    funcionario.setSenha(new BCryptPasswordEncoder().encode(this.resultSet.getString("senha")));
+
             this.preparedStatement.setString(2, funcionario.getSenha());
+         //   String senhaCriptografada = new BCryptPasswordEncoder().encode(funcionario.getSenha());
+          //  this.preparedStatement.setString(2, senhaCriptografada);
             this.preparedStatement.setString(3, funcionario.getCargo());
             this.preparedStatement.setFloat(4, funcionario.getSalario());
             this.preparedStatement.setString(5, funcionario.getTelefone());

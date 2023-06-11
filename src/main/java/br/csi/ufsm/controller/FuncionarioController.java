@@ -2,6 +2,7 @@ package br.csi.ufsm.controller;
 
 import br.csi.ufsm.dao.Funcionariodao;
 import br.csi.ufsm.model.Funcionario;
+import br.csi.ufsm.model.Venda;
 import br.csi.ufsm.security.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/funcionario")
-public class FuncionarioController {
+public class FuncionarioController{
     @Autowired
     private AuthenticationManager authenticationManager;
 
@@ -28,9 +29,12 @@ public class FuncionarioController {
         System.out.println(funcionario.getSenha());
         System.out.println(funcionario.getCargo());
 
+
         try{
             Funcionario funcionario1=new Funcionariodao().getUsuariobyemail(funcionario.getEmail());
             System.out.println("Pegando o cargo pelo email:"+funcionario1.getCargo());
+            System.out.println("Pegando o cargo pelo email:"+funcionario1.getId_func());
+
             funcionario.setCargo(funcionario1.getCargo());
             System.out.println("MANDANDO PARA OUTRO:"+funcionario.getCargo());
             final Authentication autenticado= this.authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(funcionario.getEmail(), funcionario.getSenha()));

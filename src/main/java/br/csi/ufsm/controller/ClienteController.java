@@ -24,9 +24,6 @@ public class ClienteController {
         System.out.println("Cliente que será criado:"+cliente.getEmail_cliente());
         System.out.println("Cliente que será criado:"+cliente.getTelefone_cliente());
         System.out.println("Cliente que será criado:"+cliente.getCpf());
-
-
-
         //  System.out.println("id:"+autor.getId_aut());
         return new Clientedao().setCliente(cliente);
     }

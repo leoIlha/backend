@@ -12,6 +12,16 @@ public class Livro {
     private Date data_lanc;
     private int estoque_liv;
 
+    private float preco;
+
+    public float getPreco() {
+        return preco;
+    }
+
+    public void setPreco(float preco) {
+        this.preco = preco;
+    }
+
     private int novoestoq;
 
     public int getNovoestoq() {
