@@ -8,8 +8,8 @@ public class Funcionario {
     private String email;
     private String cargo;
     private  String senha;
-
     private String token;
+    private int totalvendas;
 
     public int getId_func() {
         return id_func;
@@ -70,8 +70,15 @@ public class Funcionario {
     public String getToken() {
         return token;
     }
-
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public int getTotalvendas() {
+        return totalvendas;
+    }
+
+    public void setTotalvendas(int totalvendas) {
+        this.totalvendas = totalvendas;
     }
 }

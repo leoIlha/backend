@@ -91,9 +91,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
                 //VENDAS
                 .antMatchers(HttpMethod.GET,"/carrinho/carrinhos").hasAnyAuthority("gerente","funcionario")
-             .antMatchers(HttpMethod.POST,"/carrinho/save").hasAnyAuthority("gerente","funcionario");
+             .antMatchers(HttpMethod.POST,"/carrinho/save").hasAnyAuthority("gerente","funcionario")
 
-             //   .anyRequest()
+                //relatorios
+                .antMatchers(HttpMethod.GET, "/relatorios/livromaisvendido").hasAnyAuthority("gerente")
+                .antMatchers(HttpMethod.GET, "/relatorios/livrolivrosemfalta").hasAnyAuthority("gerente")
+                .antMatchers(HttpMethod.GET, "/relatorios/funcmais").hasAnyAuthority("gerente")
+                .antMatchers(HttpMethod.GET, "/relatorios/funcmenos").hasAnyAuthority("gerente")
+                .antMatchers(HttpMethod.GET, "/relatorios/cli").hasAnyAuthority("gerente");
+
+
+        //   .anyRequest()
              //   .denyAll();
         //.and().formLogin();
         http.addFilterBefore(this.filtroAutenticacao(), UsernamePasswordAuthenticationFilter.class);

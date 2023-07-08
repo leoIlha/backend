@@ -6,8 +6,7 @@ public class Cliente {
     private String telefone_cliente;
     private String nome_cliente;
     private String email_cliente;
-
-
+    private int totaldecompras;
     public int getId_cli() {
         return id_cli;
     }
@@ -46,5 +45,13 @@ public class Cliente {
 
     public void setEmail_cliente(String email_cliente) {
         this.email_cliente = email_cliente;
+    }
+
+    public int getTotaldecompras() {
+        return totaldecompras;
+    }
+
+    public void setTotaldecompras(int totaldecompras) {
+        this.totaldecompras = totaldecompras;
     }
 }

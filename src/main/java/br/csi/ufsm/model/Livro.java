@@ -11,8 +11,9 @@ public class Livro {
     private int num_paginas;
     private Date data_lanc;
     private int estoque_liv;
-
     private float preco;
+
+    private int totaldevendas;
 
     public float getPreco() {
         return preco;
@@ -95,5 +96,13 @@ public class Livro {
 
     public void setData_lanc(Date data_lanc) {
         this.data_lanc = data_lanc;
+    }
+
+    public int getTotaldevendas() {
+        return totaldevendas;
+    }
+
+    public void setTotaldevendas(int totaldevendas) {
+        this.totaldevendas = totaldevendas;
     }
 }

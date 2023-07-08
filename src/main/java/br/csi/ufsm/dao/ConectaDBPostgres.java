@@ -9,7 +9,7 @@ public class ConectaDBPostgres {
    // private static final String URL=  "jdbc:postgresql://localhost:5432/projeto_integrador";
 
 
-    private static final String URL=  "jdbc:postgresql://localhost:5432/jj";
+    private static final String URL=  "jdbc:postgresql://localhost:5432/ultimo";
 
     private static final String USER="postgres";
 
